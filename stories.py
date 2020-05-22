@@ -33,7 +33,9 @@ class Story:
             text = text.replace("{" + key + "}", val)
 
         return text
-
+    
+    # def normalized_prompts(self):
+    #     return [word.replace("_", " ").title() for word in self.prompts]
 
 # Here's a story to get you started
 

@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MadLibs</title>
-</head>
-<body>
-    <h1>MadLibs</h1>
-</body>
-</html>
+{% extends 'base.html' %} {% block title%} MadLibs Form {% endblock %} {% block
+content %}
+<form action="/madlibs" autocomplete="off">
+  <h1>PLACEHOLDER STORY NAME</h1>
+  {%for word in prompts %} <input type="text" name="{{word}}"
+  placeholder="{{word.replace('_', ' ')}}"> {%endfor%}
+  <input type="submit" value="SUBMIT" />
+</form>
+{% endblock %}
